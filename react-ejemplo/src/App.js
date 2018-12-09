@@ -13,7 +13,8 @@ class App extends Component {
   componentDidMount() {
     const { endpoint } = this.state;
     const socket = socketIOClient(endpoint);
-    socket.on("chat", data => this.setState({ response: data , socket}));
+    this.setState({socket})
+    socket.on("chat", data => this.setState({ response: data}));
   }
   render() {
     const { response } = this.state;
@@ -27,7 +28,7 @@ class App extends Component {
   }
 
   chatear(){
-    this.state.socket.emit("chat", document.getElementById("chat"));
+    this.state.socket.emit("chat", document.getElementById("chat").value);
   }
 }
 export default App;
