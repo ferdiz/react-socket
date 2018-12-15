@@ -20,13 +20,12 @@ class App extends Component {
     const { response } = this.state;
     return (
       <div style={{ textAlign: "center" }}>
-<<<<<<< HEAD
+
       inpu
-=======
+
         <p> Ultimo mensaje: {response}</p>
         <input id="chat" />
         <button onClick={this.chatear}>Enviar</button>
->>>>>>> c5745bd08832bdb07ffee49685ac7a16d8c01b39
       </div>
     );
   }
