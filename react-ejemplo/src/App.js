@@ -5,7 +5,7 @@ class App extends Component {
     super();
     this.state = {
       response: false,
-      endpoint: "http://127.0.0.1:4001"
+      endpoint: "http://192.168.0.42:4001/"
     };
   }
   componentDidMount() {
@@ -17,11 +17,7 @@ class App extends Component {
     const { response } = this.state;
     return (
       <div style={{ textAlign: "center" }}>
-        {response
-          ? <p>
-              The temperature in Florence is: {response} °F
-            </p>
-          : <p>Loading...</p>}
+      inpu
       </div>
     );
   }
